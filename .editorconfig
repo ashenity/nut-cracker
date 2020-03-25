@@ -1,0 +1,31 @@
+# editorconfig.org
+root = true
+
+# All files
+[*]
+guidelines = 80
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert = false
+
+# C# or VB files
+[*.{cs,vb}]
+guidelines = 80, 120
+indent_size = 4
+end_of_line = crlf
+
+# "This." and "Me." qualifiers: https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference#this_and_me
+dotnet_style_qualification_for_field = true : warning
+dotnet_style_qualification_for_property = true : warning
+dotnet_style_qualification_for_method = true : warning
+dotnet_style_qualification_for_event = true : warning
+
+# Modifier preferences: https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference#normalize_modifiers
+dotnet_style_require_accessibility_modifiers = always : warning
+sharp_preferred_modifier_order = public,private,protected,internal,static,extern,new,virtual,abstract,sealed,override,readonly,unsafe,volatile,async : warning
+
+# Organize usings: https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference#net-formatting-settings
+dotnet_sort_system_directives_first = true
